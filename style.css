@@ -1,93 +1,272 @@
 body {
-background-color: black;
+  background-color: black;
   margin: 0;
-    padding: 0;
+  padding: 0;
+}
+
+header {
+  background-color: aliceblue;
+  border: 2px solid #DCB253;
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px, 20px, 20px, 20px, ;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.logo img {
+  width: 100px;
+}
+
+.social {
+  gap: 40px;
+}
+
+.social img {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+}
+
+.main {
+  padding: 0 20px;
+}
+
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border: 2px solid #DCB253;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.menu-section {
+  display: flex;
+  flex-direction: column;
+  width: 28%;
+  margin-bottom: 20px;
+  border: 2px solid #DCB253;
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.menu-section img {
+  border-radius: 20px;
+}
+
+.menu-image {
+  display: flex;
+  flex-direction: column;
+  width: 28%;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+.menu-image img {
+  border-radius: 20px;
+  height: 650px;
+}
+
+.title-olimpo {
+  display: flex;
+  align-content: center;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.price {
+  display: flex;
+  justify-content: right;
+  font-style: italic;
+  font-weight: 600;
+  word-spacing: 35px;
+  line-height: 1px;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.price-title {
+  display: flex;
+  justify-content: right;
+  font-style: italic;
+  font-weight: 600;
+  word-spacing: 15px;
+  line-height: 1px;
+  color: white;
+}
+
+.price-pizza-title {
+  display: flex;
+  justify-content: center;
+  font-style: italic;
+  font-weight: 600;
+  word-spacing: 17px;
+  line-height: 1px;
+  color: white;
+}
+
+.price-pizza {
+  display: flex;
+  font-style: italic;
+  font-weight: 600;
+  word-spacing: 30px;
+  line-height: 1px;
+  color: white;
+}
+
+
+h1,
+h2,
+h3 {
+  display: flex;
+  background-color: #DCB253;
+  padding: 5px 10px 5px 10px;
+  border-radius: 20px;
+  color: #4f0e1a;
+  font-family: "Caesar Dressing", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+  color: #DCB253;
+  font-family: "Cinzel", serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/* Styles pour les écrans de petite taille (mobile) */
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 10px;
   }
-  
+  .column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
   header {
-    border: 2px solid #DCB253;
-    border-radius: 10px;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px, 20px, 20px, 20px,;
+    width: 100%;
   }
-  
-  .logo img {
-    width: 100px;
-  }
-  
-  .social {
-    gap: 40px;
-  }
-  
-  .social img {
-    width: 40px;
-    height: 40px;
-    margin-left: 10px;
-  }
-  
-  .main {
-    padding: 0 20px;
-  }
-  
+
   .menu-container {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-    border: 2px solid #DCB253;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px;
+    width: 90%;
   }
-  
+
   .menu-section {
+    width: 80%;
     display: flex;
     flex-direction: column;
-    width: 28%;
-    margin-bottom: 20px;
-    border: 2px solid #DCB253;
-    border-radius: 10px;
-    padding: 10px 20px;
-    display: flex;
-    margin-bottom: 20px;
+    flex-wrap: wrap;
   }
 
   .menu-section img {
-    border-radius: 20px;
+    display: none;
   }
 
-  .menu-image {
+  .price-pizza-title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-style: italic;
+    font-weight: 600;
+    word-spacing: 30px;
+    line-height: 25px;
+    color: white;
+  }
+  
+  .price-pizza {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-style: italic;
+    font-weight: 600;
+    word-spacing: 50px;
+    line-height: 25px;
+    color: white;
+  }
+}
+
+/* Styles pour les écrans de taille moyenne (tablettes) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+  .column {
+    width: 50%;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .menu-container {
     display: flex;
     flex-direction: column;
-    width: 28%;
-    margin-bottom: 20px;
-    padding: 10px 20px;
-    margin-bottom: 20px;
+    flex-wrap: wrap;
+    width: 580px;
   }
 
-  .menu-image img {
-    border-radius: 20px;
-    height: 650px;
-  }
-  
-  
-  h1, h2, h3 {
+  .menu-section {
+    width: 550px;
     display: flex;
-    background-color: #DCB253;
-    padding: 5px 10px 5px 10px;
-    border-radius: 20px;
-    color: #4f0e1a;
-    font-family: "Caesar Dressing", system-ui;
-  font-weight: 400;
-  font-style: normal;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .menu-section img {
+    width: 80%;
+    min-width: 550px;
+    max-width: 1000px;
+  }
+
+  .price-pizza-title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    font-style: italic;
+    font-weight: 600;
+    word-spacing: 25%;
+    line-height: 25px;
+    color: white;
   }
   
-  p {
-    color: #DCB253;
-    font-family: "Cinzel", serif;
-    font-weight: 400;
-    font-size: 18px;
+  .price-pizza {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-style: italic;
+    font-weight: 600;
+    word-spacing: 25%;
+    line-height: 25px;
+    color: white;
   }
+}
+
+/* Styles pour les écrans de grande taille (desktop) */
+@media only screen and (min-width: 1025px) {
+  .container {
+    width: 1024px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .column {
+    width: 33.33%;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+}
